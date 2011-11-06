@@ -1,4 +1,4 @@
-(ns clojure.test.core
+(ns katapotter.test.core
   (:use [clojure.core])
   (:use [clojure.test]))
 
