@@ -12,30 +12,32 @@ import static java.util.Arrays.asList;
 
 public class PriceTest {
 
+    private void samePrice(double expected, double actual) {
+        assertEquals(expected, actual, 0.001);
+    }
+
     @Test()
     public void noBooksNoMoney() {
-        assertEquals(BigDecimal.valueOf(0), price(Collections.<Integer>emptyList()));
+        samePrice(0, price(Collections.<Integer>emptyList()));
     }
 
     @Test
     public void priceWithoutDiscounts() {
-        assertEquals(BigDecimal.valueOf(8), price(asList(0)));
-        assertEquals(BigDecimal.valueOf(8), price(asList(1)));
-        assertEquals(BigDecimal.valueOf(8), price(asList(2)));
-        assertEquals(BigDecimal.valueOf(8), price(asList(3)));
-        assertEquals(BigDecimal.valueOf(8), price(asList(4)));
-        assertEquals(BigDecimal.valueOf(8 * 2), price(asList(0, 0)));
-        assertEquals(BigDecimal.valueOf(8 * 3), price(asList(1, 1, 1)));
+        samePrice(8, price(asList(0)));
+        samePrice(8, price(asList(1)));
+        samePrice(8, price(asList(2)));
+        samePrice(8, price(asList(3)));
+        samePrice(8, price(asList(4)));
+        samePrice(8 * 2, price(asList(0, 0)));
+        samePrice(8 * 3, price(asList(1, 1, 1)));
     }
 
     @Test
     public void priceSimpleDiscounts() {
-        assertEquals(BigDecimal.valueOf(8 * 2 * 0.95), price(asList(0, 1)));
-        /*
-  assert_equal(8 * 3 * 0.9, price([0, 2, 4]))
-  assert_equal(8 * 4 * 0.8, price([0, 1, 2, 4]))
-  assert_equal(8 * 5 * 0.75, price([0, 1, 2, 3, 4]))
-        */
+        samePrice(8 * 2 * 0.95, price(asList(0, 1)));
+        samePrice(8 * 3 * 0.9, price(asList(0, 2, 4)));
+        samePrice(8 * 4 * 0.8, price(asList(0, 1, 2, 4)));
+        samePrice(8 * 5 * 0.75, price(asList(0, 1, 2, 3, 4)));
     }
 
 }
