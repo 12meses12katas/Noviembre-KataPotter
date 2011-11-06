@@ -40,4 +40,11 @@ public class PriceTest {
         samePrice(8 * 5 * 0.75, price(asList(0, 1, 2, 3, 4)));
     }
 
+    @Test
+    public void priceSeveralDiscounts() {
+        samePrice(8 + (8 * 2 * 0.95), price(asList(0, 0, 1)));
+        samePrice(2 * (8 * 2 * 0.95), price(asList(0, 0, 1, 1)));
+        samePrice((8 * 4 * 0.8) + (8 * 2 * 0.95), price(asList(0, 0, 1, 2, 2, 3)));
+        samePrice(8 + (8 * 5 * 0.75), price(asList(0, 1, 1, 2, 3, 4)));
+    }
 }
