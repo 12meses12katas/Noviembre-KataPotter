@@ -62,7 +62,7 @@
       <file leaf-file-name="PriceTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/katapotter/PriceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="34" selection-start="218" selection-end="218" vertical-scroll-proportion="0.37656903">
+            <state line="14" column="11" selection-start="290" selection-end="290" vertical-scroll-proportion="0.43933055">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,7 +73,7 @@
       <file leaf-file-name="Price.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/katapotter/Price.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="36" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+            <state line="3" column="22" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +92,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/katapotter/Price.java" />
-        <option value="$PROJECT_DIR$/src/main/java/katapotter/Price.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/katapotter/Price.java" />
         <option value="$PROJECT_DIR$/src/test/java/katapotter/PriceTest.java" />
       </list>
     </option>
@@ -445,7 +445,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/katapotter/Price.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="36" selection-start="131" selection-end="131" vertical-scroll-proportion="0.0">
+        <state line="3" column="22" selection-start="72" selection-end="72" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -454,7 +454,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/katapotter/PriceTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="34" selection-start="218" selection-end="218" vertical-scroll-proportion="0.37656903">
+        <state line="14" column="11" selection-start="290" selection-end="290" vertical-scroll-proportion="0.43933055">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
