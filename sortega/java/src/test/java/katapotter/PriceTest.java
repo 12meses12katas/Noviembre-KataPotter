@@ -28,4 +28,14 @@ public class PriceTest {
         assertEquals(BigDecimal.valueOf(8 * 3), price(asList(1, 1, 1)));
     }
 
+    @Test
+    public void priceSimpleDiscounts() {
+        assertEquals(BigDecimal.valueOf(8 * 2 * 0.95), price(asList(0, 1)));
+        /*
+  assert_equal(8 * 3 * 0.9, price([0, 2, 4]))
+  assert_equal(8 * 4 * 0.8, price([0, 1, 2, 4]))
+  assert_equal(8 * 5 * 0.75, price([0, 1, 2, 3, 4]))
+        */
+    }
+
 }
