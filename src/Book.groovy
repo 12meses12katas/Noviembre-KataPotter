@@ -1,0 +1,4 @@
+
+class Book {
+	String name
+}
