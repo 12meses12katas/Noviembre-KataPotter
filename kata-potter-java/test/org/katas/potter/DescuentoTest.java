@@ -1,38 +1,45 @@
 package org.katas.potter;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
 
-import junit.framework.AssertionFailedError;
-
+import org.junit.Before;
 import org.junit.Test;
 
 public class DescuentoTest {
 	
-	Libro l1 = new Libro("Harry Potter y la piedra filosofal", 8);
-	Libro l2 = new Libro("Harry Potter y la c‡mara secreta", 8);
 
 	static double delta = 0.01;
+	private CalculadoraPrecio calc;
+	private LibroFactory libroFactory;
+	private Cesta cesta;
 	
-	@Test
-	public void elPrimerLibroCuesta8Euros() {
-		assertEquals(8, l1.getPrecio(), delta);
+	@Before
+	public void setUp() {
+		calc = new CalculadoraPrecio();
+		libroFactory = new LibroFactory();
+		cesta = new Cesta();
+		cesta.setLibroFactory(libroFactory);
 	}
 	
 	@Test
+	public void elPrimerLibroCuesta8Euros() {
+		assertEquals(8, LibroFactory.l1.getPrecio(), delta);
+	}
+	
+	
+	@Test
 	public void dosLibrosDistintosTienenUnDescuentoDel5PorCiento() {
-		CalculadoraPrecio calc = new CalculadoraPrecio();
-		Libro[] libros = new Libro[] {l1, l2}; 
-		double precio = calc.calcularPrecio(libros);
+		cesta.a–adir(1, 0).a–adir(1, 1);
+		double precio = calc.calcularPrecio(cesta);
 		assertEquals(2*8*0.95, precio, delta);
 	}
 	
 	@Test
 	public void dosLibrosIgualesNoTienenDescuento() {
-		CalculadoraPrecio calc = new CalculadoraPrecio();
-		Libro[] libros = new Libro[] {l1, l1}; 
-		double precio = calc.calcularPrecio(libros);
+		cesta.a–adir(1, 0).a–adir(1, 0);
+		double precio = calc.calcularPrecio(cesta);
 		assertEquals(2*8, precio, delta);
 	}
 	

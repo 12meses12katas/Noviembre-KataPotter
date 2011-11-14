@@ -42,4 +42,9 @@ caso lo delega a otro Grupo. Esta recursión también se aprovecha para calcular e
 y el descuento de cada grupo.
 
 Realmente me queda la sensación de haber hecho mucho más código que pruebas, apartándome del
-TDD y del YAGNI; quizá después de una refactorización pueda volver a la buena senda. 
+TDD y del YAGNI; quizá después de una refactorización pueda volver a la buena senda.
+
+Iteración 2
+-----------
+
+ 

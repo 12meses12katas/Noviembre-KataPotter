@@ -5,8 +5,8 @@ public class CalculadoraPrecio {
 	
 	Grupo grupo = new Grupo();
 
-	public double calcularPrecio(Libro[] libros) {
-		grupo.agrupar(libros);
+	public double calcularPrecio(Cesta cesta) {
+		grupo.agrupar(cesta.getLibros());
 		double precio = grupo.calcularPrecio();
 		return precio;
 	}
