@@ -4,23 +4,22 @@ class PriceCalculator {
 	private double price
 	private Map groupedBooks
 	
-	PriceCalculator() {
+	def calculate(def books) {
 		price = 0
+		group books
+		sumGroupedBooksPrice()
+		price
 	}
 	
-	def calculate(def books) {
-		groupBooks(books)
-					
+	private void group(books) {
+		groupedBooks = books?.countBy { it.name }
+	}
+	
+	private void sumGroupedBooksPrice() {
 		getMaxBookNumber(groupedBooks)?.times {
 			price += discountedGroupPrice(groupedBooks)
 			groupedBooks = cleanBlankGroups(groupedBooks)
 		}
-		
-		price
-	}
-	
-	private void groupBooks(books) {
-		groupedBooks = books?.countBy { it.name }
 	}
 	
 	private def getMaxBookNumber (Map groupedBooks) {
