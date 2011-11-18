@@ -1,7 +1,5 @@
 package org.katas.potter;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class LibroFactory {
 	
@@ -14,10 +12,10 @@ public class LibroFactory {
 	static Libro l7 = new Libro("Harry Potter y las reliquias de la muerte", 8);
 	static Libro[] listaLibros = new Libro[] {l1, l2, l3, l4, l5, l6, l7};
 
-	public List<Libro> crearCestaLibro(int cantidad, int titulo) {
-		List<Libro> libros = new ArrayList<Libro>();
-		for (int i=0; i<cantidad; i++) {
-			libros.add(listaLibros[titulo]);
+	public Libro[] crearCestaLibro(int[] ids) {
+		Libro[] libros = new Libro[ids.length];
+		for (int i=0; i<ids.length; i++) {
+			libros[i] = listaLibros[ids[i]];
 		}
 		return libros;
 	}

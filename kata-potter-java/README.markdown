@@ -47,4 +47,34 @@ TDD y del YAGNI; quizá después de una refactorización pueda volver a la buena se
 Iteración 2
 -----------
 
- 
+En esta iteración empecé a cambiar un poco la creación de la Cesta de libros. Estaba usando
+arrays a secas instanciados dentro de la propia clase de Test. Moví todo ese código fuera
+de las pruebas, a raíz de lo cual surgieron algunas clases que van en camino de convertirse
+en Factories.
+
+En esta iteración he visto un efecto "rebote" en cuanto a que en princpio creé algunas
+clases como "Cesta" que luego descarté completamente. Mala señal, seguramente es un indicador
+de que estoy adelantándome a los test.
+
+He tenido problemas en encontrar test que me guiaran hacia la solución. Los que están
+propuestos en la Kata me demandaban mucha implementación desde un principio. Exigen mucho
+a la "caja negra".
+
+La clase que resolvió gran parte de los problemas es Grupo. Tiene una aproximación recursiva
+que me ahorró muchas línea de código para calcular el precio de los grupos de libros. Pero
+es una clase que no surgió de los test, por eso me lamento un poco no haber encontrado
+el conjunto de pruebas adecuado.
+
+Todos los test pasan. Como proponía la propia kata, he reuido implementar un optimizador
+genérico, pero creo que al final sería lo más elegante. La optimización que hay implementada
+es a base de balancear la talla de los grupos. Primero calculo el precio con la agrupación
+natural del algoritmo y luego calculo el precio intentando que las tallas de los mismos sean
+parecidas. A pesar de que funciona, tiene un efecto secundario grave, porque en casos
+devuelve un precio que no correpondo con al grupo tal y como queda después de calcularlo.
+
+Conclusión
+----------
+
+Es una kata que puede dar mucho de sí, pero la elección de los casos no me ha satisfecho.
+Creo que la voy a intentar en otro momento, cuando el problema haya "descansado", 
+centrandome en encontrar los tests que conduzcan a la solución de manera mucho más simple. 
