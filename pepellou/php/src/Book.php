@@ -66,6 +66,7 @@ class Pack {
 	private function getDiscount(
 	) {
 		$discounts = array(
+			0 => 0,
 			1 => 1,
 			2 => 0.95,
 			3 => 0.9,

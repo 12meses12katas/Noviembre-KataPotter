@@ -39,6 +39,10 @@ class BookTest extends PHPUnit_Framework_TestCase {
 	public function simple_discounts_examples(
 	) {
 		return array(
+			"empty pack" => array(
+				new Pack(), 
+				0
+			),
 			"one single book" => array(
 				new Pack(
 					new Book(FIRST_BOOK)
