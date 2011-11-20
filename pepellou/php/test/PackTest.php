@@ -15,11 +15,11 @@ class PackTest extends PHPUnit_Framework_TestCase {
 
 	public function atomic_packs(
 	) {
-		$book1 = new Book(FIRST_BOOK);
-		$book2 = new Book(SECOND_BOOK);
-		$book3 = new Book(THIRD_BOOK);
-		$book4 = new Book(FOURTH_BOOK);
-		$book5 = new Book(FIFTH_BOOK);
+		$book1 = new Book(Book::$FIRST);
+		$book2 = new Book(Book::$SECOND);
+		$book3 = new Book(Book::$THIRD);
+		$book4 = new Book(Book::$FOURTH);
+		$book5 = new Book(Book::$FIFTH);
 		return array(
 			"sample 1" => array(new Pack($book1)),
 			"sample 2" => array(new Pack($book1, $book2)),
@@ -39,11 +39,11 @@ class PackTest extends PHPUnit_Framework_TestCase {
 
 	public function nonatomic_packs(
 	) {
-		$book1 = new Book(FIRST_BOOK);
-		$book2 = new Book(SECOND_BOOK);
-		$book3 = new Book(THIRD_BOOK);
-		$book4 = new Book(FOURTH_BOOK);
-		$book5 = new Book(FIFTH_BOOK);
+		$book1 = new Book(Book::$FIRST);
+		$book2 = new Book(Book::$SECOND);
+		$book3 = new Book(Book::$THIRD);
+		$book4 = new Book(Book::$FOURTH);
+		$book5 = new Book(Book::$FIFTH);
 		return array(
 			"sample 1" => array(new Pack($book1, $book1)),
 			"sample 2" => array(new Pack($book1, $book2, $book1)),

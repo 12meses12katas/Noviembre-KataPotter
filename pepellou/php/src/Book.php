@@ -1,22 +1,14 @@
 <?php
 
-define ("FIRST_BOOK",  "Harry Potter and the Philosopher's Stone");
-define ("SECOND_BOOK", "Harry Potter and the Chamber of Secrets");
-define ("THIRD_BOOK",  "Harry Potter and the Prisoner of Azkaban");
-define ("FOURTH_BOOK", "Harry Potter and the Goblet of Fire");
-define ("FIFTH_BOOK",  "Harry Potter and the Order of the Phoenix");
-
 class NoSuchBook extends Exception {}
 
 class Book {
 
-	private static $known_books = array(
-		FIRST_BOOK,
-		SECOND_BOOK,
-		THIRD_BOOK,
-		FOURTH_BOOK,
-		FIFTH_BOOK
-	);
+	public static $FIRST  = "Harry Potter and the Philosopher's Stone";
+	public static $SECOND = "Harry Potter and the Chamber of Secrets";
+	public static $THIRD  = "Harry Potter and the Prisoner of Azkaban";
+	public static $FOURTH = "Harry Potter and the Goblet of Fire";
+	public static $FIFTH  = "Harry Potter and the Order of the Phoenix";
 
 	private $name;
 
@@ -30,7 +22,14 @@ class Book {
 
 	private function exists(
 	) {
-		return (in_array($this->name, self::$known_books));
+		$known_books = array(
+			self::$FIRST,
+			self::$SECOND,
+			self::$THIRD,
+			self::$FOURTH,
+			self::$FIFTH
+		);
+		return (in_array($this->name, $known_books));
 	}
 
 	public function price(
