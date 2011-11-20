@@ -207,6 +207,53 @@ class BookTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals($expectedPrice, $pack->price());
 	}
 
+	public function edge_cases(
+	) {
+		return array(
+			"case 1" => array(
+				new Pack(
+					new Book(Book::$FIRST),
+					new Book(Book::$FIRST),
+					new Book(Book::$SECOND),
+					new Book(Book::$SECOND),
+					new Book(Book::$THIRD),
+					new Book(Book::$THIRD),
+					new Book(Book::$FOURTH),
+					new Book(Book::$FIFTH)
+				), 
+				2 * (8 * 4 * 0.8)
+			),
+			"case 2" => array(
+				new Pack(
+					new Book(Book::$FIRST), new Book(Book::$FIRST),
+					new Book(Book::$FIRST), new Book(Book::$FIRST),
+					new Book(Book::$FIRST),
+					new Book(Book::$SECOND), new Book(Book::$SECOND),
+					new Book(Book::$SECOND), new Book(Book::$SECOND),
+					new Book(Book::$SECOND),
+					new Book(Book::$THIRD), new Book(Book::$THIRD),
+					new Book(Book::$THIRD), new Book(Book::$THIRD),
+					new Book(Book::$FOURTH), new Book(Book::$FOURTH),
+					new Book(Book::$FOURTH), new Book(Book::$FOURTH),
+					new Book(Book::$FOURTH),
+					new Book(Book::$FIFTH), new Book(Book::$FIFTH),
+					new Book(Book::$FIFTH), new Book(Book::$FIFTH)
+				), 
+				3 * (8 * 5 * 0.75) + 2 * (8 * 4 * 0.8)
+			)
+		);
+	}
+
+	/**
+	 * @dataProvider edge_cases
+	*/
+	public function test_edged_cases(
+		$pack,
+		$expectedPrice
+	) {
+		$this->assertEquals($expectedPrice, $pack->price());
+	}
+
 	public function all_valid_books(
 	) {
 		return array(

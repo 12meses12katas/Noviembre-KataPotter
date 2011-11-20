@@ -88,11 +88,42 @@ class Pack {
 		return $placed;
 	}
 
+	private function getValueFor(
+		$book,
+		$subpack
+	) {
+		if (!$subpack->contains($book))
+			return 1;
+		return 0;
+	}
+
+	private function place_in_best_subpack(
+		$book
+	) {
+		$placed = false;
+		$best_subpack = null;
+		$best_subpack_value = 0;
+		foreach ($this->subpacks as $subpack) {
+			if (!$placed) {
+				$new_heuristic = $this->getValueFor($book, $subpack);
+				if ($new_heuristic > $best_subpack_value) {
+					$best_subpack = $subpack;
+					$best_subpack_value = $new_heuristic;
+				}
+			}
+		}
+		if ($best_subpack != null) {
+			$best_subpack->addBook($book);
+			$placed = true;
+		}
+		return $placed;
+	}
+
 	public function buildSubpacks(
 	) {	
 		$this->subpacks = array();
 		foreach ($this->books as $book) {
-			$placed = $this->place_in_first_valid_subpack($book);
+			$placed = $this->place_in_best_subpack($book);
 			if (!$placed) {
 				$this->subpacks []= new Pack($book);
 			}
