@@ -38,6 +38,11 @@ class Book {
 		return 8;
 	}
 
+	public function __toString(
+	) {
+		return $this->name;
+	}
+
 }
 
 class Pack {
@@ -73,7 +78,12 @@ class Pack {
 			4 => 0.8,
 			5 => 0.75
 		);
-		return $discounts[count($this->books)];
+		return $discounts[$this->numberOfDifferentBooks()];
+	}
+
+	private function numberOfDifferentBooks(
+	) {
+		return count(array_unique($this->books));
 	}
 
 	public function numberOfBooks(
