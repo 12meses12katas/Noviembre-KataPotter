@@ -152,6 +152,61 @@ class BookTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals($expectedPrice, $pack->price());
 	}
 
+	public function mixed_examples(
+	) {
+		return array(
+			"case 1" => array(
+				new Pack(
+					new Book(FIRST_BOOK),
+					new Book(FIRST_BOOK),
+					new Book(SECOND_BOOK)
+				), 
+				8 + (8 * 2 * 0.95)
+			),
+			"case 2" => array(
+				new Pack(
+					new Book(FIRST_BOOK),
+					new Book(FIRST_BOOK),
+					new Book(SECOND_BOOK),
+					new Book(SECOND_BOOK)
+				), 
+				2 * (8 * 2 * 0.95)
+			),
+			"case 3" => array(
+				new Pack(
+					new Book(FIRST_BOOK),
+					new Book(FIRST_BOOK),
+					new Book(SECOND_BOOK),
+					new Book(THIRD_BOOK),
+					new Book(THIRD_BOOK),
+					new Book(FOURTH_BOOK)
+				), 
+				(8 * 4 * 0.8) + (8 * 2 * 0.95)
+			),
+			"case 4" => array(
+				new Pack(
+					new Book(FIRST_BOOK),
+					new Book(SECOND_BOOK),
+					new Book(SECOND_BOOK),
+					new Book(THIRD_BOOK),
+					new Book(FOURTH_BOOK),
+					new Book(FIFTH_BOOK)
+				), 
+				8 + (8 * 5 * 0.75)
+			)
+		);
+	}
+
+	/**
+	 * @dataProvider mixed_examples
+	*/
+	public function test_mixed_cases(
+		$pack,
+		$expectedPrice
+	) {
+		$this->assertEquals($expectedPrice, $pack->price());
+	}
+
 	public function all_valid_books(
 	) {
 		return array(

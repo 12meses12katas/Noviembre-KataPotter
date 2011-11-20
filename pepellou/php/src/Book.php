@@ -48,15 +48,66 @@ class Book {
 class Pack {
 
 	private $books;
+	private $subpacks;
 
 	public function __construct(
 	) {
 		$this->books = func_get_args();
+		$this->refreshSubpacks();
+	}
+
+	private function refreshSubpacks(
+	) {
+		if (!$this->isAtomic())
+			$this->buildSubpacks();
+	}
+
+	public function addBook(
+		$book
+	) {
+		$this->books []= $book;
+	}
+
+	public function contains(
+		$book
+	) {
+		return (in_array($book, $this->books));
+	}
+
+	public function buildSubpacks(
+	) {	
+		$subpacks = array();
+		foreach ($this->books as $book) {
+			$placed = false;
+			foreach ($subpacks as $subpack) {
+				if (!$placed) {
+					if (!$subpack->contains($book)) {
+						$subpack->addBook($book);
+						$placed = true;
+					}
+				}
+			}
+			if (!$placed) {
+				$subpacks []= new Pack($book);
+			}
+		}
+		$this->subpacks = $subpacks;
 	}
 
 	public function price(
 	) {
-		return $this->getBooksPrice() * $this->getDiscount();
+		return ($this->isAtomic())
+			? $this->getBooksPrice() * $this->getDiscount()
+			: $this->totalSumOfSubpacks();
+	}
+
+	public function totalSumOfSubpacks(
+	) {
+		$total = 0;
+		foreach ($this->subpacks as $subpack) {
+			$total += $subpack->price();
+		}
+		return $total;
 	}
 
 	private function getBooksPrice(
