@@ -73,24 +73,30 @@ class Pack {
 		return (in_array($book, $this->books));
 	}
 
-	public function buildSubpacks(
-	) {	
-		$subpacks = array();
-		foreach ($this->books as $book) {
-			$placed = false;
-			foreach ($subpacks as $subpack) {
-				if (!$placed) {
-					if (!$subpack->contains($book)) {
-						$subpack->addBook($book);
-						$placed = true;
-					}
+	private function place_in_first_valid_subpack(
+		$book
+	) {
+		$placed = false;
+		foreach ($this->subpacks as $subpack) {
+			if (!$placed) {
+				if (!$subpack->contains($book)) {
+					$subpack->addBook($book);
+					$placed = true;
 				}
 			}
+		}
+		return $placed;
+	}
+
+	public function buildSubpacks(
+	) {	
+		$this->subpacks = array();
+		foreach ($this->books as $book) {
+			$placed = $this->place_in_first_valid_subpack($book);
 			if (!$placed) {
-				$subpacks []= new Pack($book);
+				$this->subpacks []= new Pack($book);
 			}
 		}
-		$this->subpacks = $subpacks;
 	}
 
 	public function price(
