@@ -92,8 +92,17 @@ class Pack {
 		$book,
 		$subpack
 	) {
-		if (!$subpack->contains($book))
-			return 1;
+		if (!$subpack->contains($book)) {
+			$values = array(
+				0 => 0,
+				1 => 0.7,
+				2 => 0.8,
+				3 => 1,
+				4 => 0.9,
+				5 => 0.5
+			);
+			return $values[$subpack->numberOfDifferentBooks()];
+		}
 		return 0;
 	}
 
