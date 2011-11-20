@@ -39,3 +39,23 @@ class Book {
 	}
 
 }
+
+class Pack {
+
+	private $books;
+
+	public function __construct(
+	) {
+		$this->books = func_get_args();
+	}
+
+	public function price(
+	) {
+		$price = 0;
+		foreach ($this->books as $book) {
+			$price += $book->price();
+		}
+		return $price * 0.95;
+	}
+
+}
