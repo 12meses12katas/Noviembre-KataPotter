@@ -33,4 +33,9 @@ class Book {
 		return (in_array($this->name, self::$known_books));
 	}
 
+	public function price(
+	) {
+		return 8;
+	}
+
 }

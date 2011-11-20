@@ -26,5 +26,26 @@ class BookTest extends PHPUnit_Framework_TestCase {
 		new Book($unexisting_title);
 	}
 
+	/**
+	 * @dataProvider all_valid_books
+	 */
+	public function test_one_book_costs_eight_euro(
+		$bookName
+	) {
+		$aBook = new Book($bookName);
+		$this->assertEquals(8, $aBook->price());
+	}
+
+	public function all_valid_books(
+	) {
+		return array(
+			"first book"  => array(FIRST_BOOK),
+			"second book" => array(SECOND_BOOK),
+			"third book"  => array(THIRD_BOOK),
+			"fourth book" => array(FOURTH_BOOK),
+			"fifth book"  => array(FIFTH_BOOK)
+		);
+	}
+
 }
 
