@@ -43,14 +43,14 @@ class BookTest extends PHPUnit_Framework_TestCase {
 				new Pack(
 					new Book(FIRST_BOOK)
 				), 
-				1
+				8
 			),
 			"two books" => array(
 				new Pack(
 					new Book(FIRST_BOOK), 
 					new Book(SECOND_BOOK)
 				), 
-				0.95
+				15.2
 			),
 			"three books" => array(
 				new Pack(
@@ -58,7 +58,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(SECOND_BOOK),
 					new Book(THIRD_BOOK)
 				), 
-				0.9
+				21.6
 			),
 			"four books" => array(
 				new Pack(
@@ -67,7 +67,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(THIRD_BOOK),
 					new Book(FOURTH_BOOK)
 				), 
-				0.8
+				25.6
 			),
 			"five books" => array(
 				new Pack(
@@ -77,7 +77,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(FOURTH_BOOK),
 					new Book(FIFTH_BOOK)
 				), 
-				0.75
+				30
 			),
 		);
 	}
@@ -85,12 +85,11 @@ class BookTest extends PHPUnit_Framework_TestCase {
 	/**
 	 * @dataProvider simple_discounts_examples
 	*/
-	public function test_simple_discounts(
+	public function test_simple_cases(
 		$pack,
-		$discount
+		$expectedPrice
 	) {
-		$numberOfBooks = $pack->numberOfBooks();
-		$this->assertEquals(8 * $numberOfBooks * $discount, $pack->price());
+		$this->assertEquals($expectedPrice, $pack->price());
 	}
 
 	public function all_valid_books(
