@@ -1,0 +1,9 @@
+<phpunit>
+	<testsuites>
+
+		<testsuite name="AllTests">
+			<directory>test</directory>
+		</testsuite>
+
+	</testsuites>
+</phpunit>
