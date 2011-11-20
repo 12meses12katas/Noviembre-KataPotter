@@ -91,4 +91,14 @@ class Pack {
 		return count($this->books);
 	}
 
+	public function __toString(
+	) {
+		return "Pack {" . implode(", ", $this->books) . "}";
+	}
+
+	public function isAtomic(
+	) {
+		return ($this->numberOfBooks() == $this->numberOfDifferentBooks());
+	}
+
 }

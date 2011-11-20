@@ -95,6 +95,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 	) {
 		$this->assertEquals($expectedPrice, $pack->price());
 	}
+
 	public function no_discounts_examples(
 	) {
 		return array(
