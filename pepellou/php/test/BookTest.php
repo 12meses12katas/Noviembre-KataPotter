@@ -54,7 +54,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(FIRST_BOOK), 
 					new Book(SECOND_BOOK)
 				), 
-				15.2
+				8 * 2 * 0.95
 			),
 			"three books" => array(
 				new Pack(
@@ -62,7 +62,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(SECOND_BOOK),
 					new Book(THIRD_BOOK)
 				), 
-				21.6
+				8 * 3 * 0.9
 			),
 			"four books" => array(
 				new Pack(
@@ -71,7 +71,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(THIRD_BOOK),
 					new Book(FOURTH_BOOK)
 				), 
-				25.6
+				8 * 4 * 0.8
 			),
 			"five books" => array(
 				new Pack(
@@ -81,7 +81,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(FOURTH_BOOK),
 					new Book(FIFTH_BOOK)
 				), 
-				30
+				8 * 5 * 0.75
 			),
 		);
 	}
@@ -110,7 +110,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(FIRST_BOOK), 
 					new Book(FIRST_BOOK)
 				), 
-				16
+				8 * 2
 			),
 			"three books" => array(
 				new Pack(
@@ -118,7 +118,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(FIRST_BOOK),
 					new Book(FIRST_BOOK)
 				), 
-				24
+				8 * 3
 			),
 			"four books" => array(
 				new Pack(
@@ -127,7 +127,7 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(FIRST_BOOK),
 					new Book(FIRST_BOOK)
 				), 
-				32
+				8 * 4
 			),
 			"five books" => array(
 				new Pack(
@@ -137,8 +137,8 @@ class BookTest extends PHPUnit_Framework_TestCase {
 					new Book(FIRST_BOOK),
 					new Book(FIRST_BOOK)
 				), 
-				40
-			),
+				8 * 5
+			)
 		);
 	}
 
