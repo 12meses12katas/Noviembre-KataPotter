@@ -36,22 +36,29 @@ class BookTest extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(8, $aBook->price());
 	}
 
-	/**
-	 * @dataProvider all_valid_books
-	 */
-	public function test_a_pack_of_one_book_costs_eight_euro(
-		$bookName
+	public function discounts_examples(
 	) {
-		$aPack = new Pack(new Book($bookName));
-		$this->assertEquals(8, $aPack->price());
+		return array(
+			"one single book" => array(
+				new Pack(new Book(FIRST_BOOK)), 
+				1
+			),
+			"two books" => array(
+				new Pack(new Book(FIRST_BOOK), new Book(SECOND_BOOK)), 
+				0.95
+			),
+		);
 	}
 
-	public function test_two_books_5_percent_discount(
+	/**
+	 * @dataProvider discounts_examples
+	*/
+	public function test_simple_discounts(
+		$pack,
+		$discount
 	) {
-		$aBook = new Book(FIRST_BOOK);
-		$anotherBook = new Book(SECOND_BOOK);
-		$aPack = new Pack($aBook, $anotherBook);
-		$this->assertEquals(8 * 2 * 0.95, $aPack->price());
+		$numberOfBooks = $pack->numberOfBooks();
+		$this->assertEquals(8 * $numberOfBooks * $discount, $pack->price());
 	}
 
 	public function all_valid_books(

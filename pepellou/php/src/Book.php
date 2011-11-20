@@ -72,4 +72,9 @@ class Pack {
 		return $discounts[count($this->books)];
 	}
 
+	public function numberOfBooks(
+	) {
+		return count($this->books);
+	}
+
 }
