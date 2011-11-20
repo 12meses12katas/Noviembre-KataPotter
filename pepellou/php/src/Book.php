@@ -51,11 +51,25 @@ class Pack {
 
 	public function price(
 	) {
+		return $this->getBooksPrice() * $this->getDiscount();
+	}
+
+	private function getBooksPrice(
+	) {
 		$price = 0;
 		foreach ($this->books as $book) {
 			$price += $book->price();
 		}
-		return $price * 0.95;
+		return $price;
+	}
+
+	private function getDiscount(
+	) {
+		$discounts = array(
+			1 => 1,
+			2 => 0.95
+		);
+		return $discounts[count($this->books)];
 	}
 
 }
