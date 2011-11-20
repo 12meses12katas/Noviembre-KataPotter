@@ -15,15 +15,14 @@ class Book {
 	public function __construct(
 		$book_number
 	) {
-		if (!$this->exists($book_number))
-			throw new NoSuchBook;
 		$this->number = $book_number;
+		if (!$this->exists())
+			throw new NoSuchBook;
 	}
 
 	private function exists(
-		$number
 	) {
-		return ($number >= FIRST_BOOK && $number <= FIFTH_BOOK);
+		return ($this->number >= FIRST_BOOK && $this->number <= FIFTH_BOOK);
 	}
 
 }
