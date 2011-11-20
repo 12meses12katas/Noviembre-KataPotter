@@ -67,7 +67,10 @@ class Pack {
 	) {
 		$discounts = array(
 			1 => 1,
-			2 => 0.95
+			2 => 0.95,
+			3 => 0.9,
+			4 => 0.8,
+			5 => 0.75
 		);
 		return $discounts[count($this->books)];
 	}
