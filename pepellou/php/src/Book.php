@@ -15,9 +15,15 @@ class Book {
 	public function __construct(
 		$book_number
 	) {
-		if ($book_number < FIRST_BOOK || $book_number > FIFTH_BOOK)
+		if (!$this->exists($book_number))
 			throw new NoSuchBook;
 		$this->number = $book_number;
+	}
+
+	private function exists(
+		$number
+	) {
+		return ($number >= FIRST_BOOK && $number <= FIFTH_BOOK);
 	}
 
 }
