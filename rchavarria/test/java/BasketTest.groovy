@@ -28,15 +28,9 @@ class BasketTest {
 	}
 
 	@Test
-	public void testSeveralDifferentBooksPrice() {
-		assert 16 == basket.price([0,1])
-		assert 16 == basket.price([1,3])
-		
-		assert 24 == basket.price([1,3,4])
-		assert 24 == basket.price([0,2,4])
-		
-		assert 32 == basket.price([0,1,3,4])
-		
-		assert 40 == basket.price([0,1,2,3,4])
+	public void testSeveralSameBooksPrice() {
+		assert 16 == basket.price([0,0])
+		assert 16 == basket.price([1,1])
+		assert 24 == basket.price([1,1,1])
 	}
 }
