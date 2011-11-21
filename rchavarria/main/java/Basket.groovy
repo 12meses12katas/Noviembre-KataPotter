@@ -1,6 +1,8 @@
 
 class Basket {
 
+	private BookListUtil bookList = new BookListUtil()
+	
 	def price(def books) {
 		if(!books) return 0
 		
@@ -11,13 +13,15 @@ class Basket {
 	
 	private computeDiscount(def books){
 		def discount = 0
+		
 		if(books.size() == 2){
-			if(books[0] != books[1]){
+			if(bookList.areAllDifferent(books)){
 				discount = 0.05
 			}
 		}
+		
 		if(books.size() == 3){
-			if(books[0] != books[1] && books[0] != books[2] && books[1] != books[2]){
+			if(bookList.areAllDifferent(books)){
 				discount = 0.1
 			}
 		}
