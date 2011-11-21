@@ -16,6 +16,11 @@ class Basket {
 				discount = 0.05
 			}
 		}
+		if(books.size() == 3){
+			if(books[0] != books[1] && books[0] != books[2] && books[1] != books[2]){
+				discount = 0.1
+			}
+		}
 		
 		return discount
 	}

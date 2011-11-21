@@ -43,4 +43,13 @@ class BasketTest {
 		assert discountPrice == basket.price([2,3])
 		assert discountPrice == basket.price([3,4])
 	}
+
+	@Test
+	public void testSimpleTenPercentDiscount() {
+		def discountPrice = 8 * 3 * 0.9
+		
+		assert discountPrice == basket.price([0,1,2])
+		assert discountPrice == basket.price([1,2,3])
+		assert discountPrice == basket.price([2,3,4])
+	}
 }
