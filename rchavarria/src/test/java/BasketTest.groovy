@@ -73,5 +73,8 @@ class BasketTest {
 		assert 8 + (8 * 2 * 0.95) ==  basket.price([0, 0, 1])
 		
 		assert (2 * (8 * 2 * 0.95) == basket.price([0, 0, 1, 1]))
+		
+		assert ((8 * 4 * 0.8) + (8 * 2 * 0.95) == basket.price([0, 0, 1, 2, 2, 3]))
+		assert (8 + (8 * 5 * 0.75) == basket.price([0, 1, 1, 2, 3, 4]))
 	}
 }
