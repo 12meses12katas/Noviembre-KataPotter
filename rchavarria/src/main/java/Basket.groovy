@@ -6,7 +6,9 @@ class Basket {
 	
 	def price(def books) {
 		if(!books) return 0
-		
+
+		def bookGroups = new BookGroup().compute(books)
+				
 		def discount = computeDiscount(books)
 		
 		(1 - discount) * 8 * books.size()
