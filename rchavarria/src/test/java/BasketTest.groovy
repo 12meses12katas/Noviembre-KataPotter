@@ -71,5 +71,7 @@ class BasketTest {
 	@Test
 	public void testSeveralDiscounts() {
 		assert 8 + (8 * 2 * 0.95) ==  basket.price([0, 0, 1])
+		
+		assert (2 * (8 * 2 * 0.95) == basket.price([0, 0, 1, 1]))
 	}
 }
