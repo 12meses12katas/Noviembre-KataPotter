@@ -20,9 +20,9 @@ class BookGroupTest {
 
 	@Test
 	public void testComputeAllBooksDifferentBookList() {
-		assert [0] == group.compute([0])
-		assert [0,1,2] == group.compute([0,1,2])
-		assert [0,1,2,3,4] == group.compute([0,1,2,3,4])
+		assert [[0]] == group.compute([0])
+		assert [[0,1,2]] == group.compute([0,1,2])
+		assert [[0,1,2,3,4]] == group.compute([0,1,2,3,4])
 	}
 
 	@Test

@@ -8,7 +8,7 @@ class BookGroup {
 			clasifyBook(groups, it)
 		}
 		
-		groups.size() == 1 ? groups.flatten() : groups
+		groups
 	}
 	
 	private clasifyBook(def groups, def book){
