@@ -1,33 +1,29 @@
 class PotterBook
   attr_accessor :title, :number
+  
   def initialize(title)
     self.title = title
   end
-  def to_s
-    self.title
-  end
+
   def ==(other)
     self.title == other.title
   end
+
   def <=>(other)
     self.title <=> other.title
   end
 end
 
 class PotterCart
-  attr_accessor :books, :collections, :discounts
-
+  attr_accessor :books
+  @@discounts = { 1 => 0.0, 2 => 0.05, 3 => 0.1, 4 => 0.2 }
+  
   def initialize
     self.books = []
-    self.discounts = {1 => 0.0, 2 => 0.05, 3 => 0.1, 4 => 0.2}
   end
 
   def <<(other)
     self.books << other
-  end
-
-  def to_s
-    "Cart Content: #{self.books.join(', ')}"
   end
 
   def find_packs
@@ -45,7 +41,7 @@ class PotterCart
   end
 
   def total_amount
-    find_packs.inject(0.0){ |sum, pack| sum + pack.size*8*(1.0 - (discounts[pack.size] || 0.25)) }
+    find_packs.inject(0.0){ |sum, pack| sum + pack.size*8*(1.0 - (@@discounts[pack.size] || 0.25)) }
   end
 
 end

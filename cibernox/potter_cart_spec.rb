@@ -24,10 +24,6 @@ describe PotterCart do
     cart.books.first.title.should == "Book1"
   end
 
-  it "should show its content when printed" do
-    full_cart.to_s.should == "Cart Content: Libro1, Libro2, Libro1, Libro3, Libro1, Libro2"
-  end
-
   it "should find books from the same packs" do
     full_cart.find_packs.should == [[book1, book2, book3],[book1, book2],[book1]]
   end
