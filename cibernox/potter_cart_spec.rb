@@ -64,14 +64,14 @@ describe PotterCart do
     # 1 copy of the fourth book
     # 1 copy of the fifth book
     cart <<  PotterBook.new('Book1')
-    cart <<  PotterBook.new('Book1')
     cart <<  PotterBook.new('Book2')
     cart <<  PotterBook.new('Book2')
-    cart <<  PotterBook.new('Book3')
     cart <<  PotterBook.new('Book3')
     cart <<  PotterBook.new('Book4')
-    cart <<  PotterBook.new('Book5') 
-    cart.total_amount.should == 51.6
+    cart <<  PotterBook.new('Book5')
+    cart <<  PotterBook.new('Book1') 
+    cart <<  PotterBook.new('Book3')       
+    cart.total_amount.should == 51.6 # Readme says 51.2, but i think it is a mistake
   end
 
 end
