@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B9112EA8146B31000014BD08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EA7146B31000014BD08 /* UIKit.framework */; };
+		B9112EAA146B31000014BD08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EA9146B31000014BD08 /* Foundation.framework */; };
+		B9112EAC146B31000014BD08 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EAB146B31000014BD08 /* CoreGraphics.framework */; };
+		B9112EB2146B31000014BD08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9112EB0146B31000014BD08 /* InfoPlist.strings */; };
+		B9112EB4146B31000014BD08 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9112EB3146B31000014BD08 /* main.m */; };
+		B9112EB8146B31000014BD08 /* DFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9112EB7146B31000014BD08 /* DFAppDelegate.m */; };
+		B9112EBB146B31000014BD08 /* DFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9112EBA146B31000014BD08 /* DFViewController.m */; };
+		B9112EBE146B31000014BD08 /* DFViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9112EBC146B31000014BD08 /* DFViewController.xib */; };
+		B9112EC6146B31000014BD08 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EC5146B31000014BD08 /* SenTestingKit.framework */; };
+		B9112EC7146B31000014BD08 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EA7146B31000014BD08 /* UIKit.framework */; };
+		B9112EC8146B31000014BD08 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EA9146B31000014BD08 /* Foundation.framework */; };
+		B9112ED0146B31000014BD08 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9112ECE146B31000014BD08 /* InfoPlist.strings */; };
+		B9112ED3146B31000014BD08 /* kattaPotterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9112ED2146B31000014BD08 /* kattaPotterTests.m */; };
+		B927F1DA148273DB00B1F8D8 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EC5146B31000014BD08 /* SenTestingKit.framework */; };
+		B927F1DB148273DB00B1F8D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EA7146B31000014BD08 /* UIKit.framework */; };
+		B927F1DC148273DB00B1F8D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9112EA9146B31000014BD08 /* Foundation.framework */; };
+		B927F1E2148273DC00B1F8D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B927F1E0148273DC00B1F8D8 /* InfoPlist.strings */; };
+		B927F1E5148273DC00B1F8D8 /* kattaPotterApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B927F1E4148273DC00B1F8D8 /* kattaPotterApplicationTests.m */; };
+		B929236C146C70AE00B8BC53 /* CashBookStore.m in Sources */ = {isa = PBXBuildFile; fileRef = B929236B146C70AE00B8BC53 /* CashBookStore.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9112EC9146B31000014BD08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9112E9A146B30FF0014BD08 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9112EA2146B31000014BD08;
+			remoteInfo = kattaPotter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B9112EA3146B31000014BD08 /* kattaPotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kattaPotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9112EA7146B31000014BD08 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B9112EA9146B31000014BD08 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B9112EAB146B31000014BD08 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B9112EAF146B31000014BD08 /* kattaPotter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kattaPotter-Info.plist"; sourceTree = "<group>"; };
+		B9112EB1146B31000014BD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9112EB3146B31000014BD08 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9112EB5146B31000014BD08 /* kattaPotter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kattaPotter-Prefix.pch"; sourceTree = "<group>"; };
+		B9112EB6146B31000014BD08 /* DFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFAppDelegate.h; sourceTree = "<group>"; };
+		B9112EB7146B31000014BD08 /* DFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFAppDelegate.m; sourceTree = "<group>"; };
+		B9112EB9146B31000014BD08 /* DFViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DFViewController.h; sourceTree = "<group>"; };
+		B9112EBA146B31000014BD08 /* DFViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DFViewController.m; sourceTree = "<group>"; };
+		B9112EBD146B31000014BD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DFViewController.xib; sourceTree = "<group>"; };
+		B9112EC4146B31000014BD08 /* kattaPotterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kattaPotterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9112EC5146B31000014BD08 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		B9112ECD146B31000014BD08 /* kattaPotterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kattaPotterTests-Info.plist"; sourceTree = "<group>"; };
+		B9112ECF146B31000014BD08 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B9112ED1146B31000014BD08 /* kattaPotterTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kattaPotterTests.h; sourceTree = "<group>"; };
+		B9112ED2146B31000014BD08 /* kattaPotterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kattaPotterTests.m; sourceTree = "<group>"; };
+		B927F1D9148273DB00B1F8D8 /* kattaPotterApplicationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kattaPotterApplicationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B927F1DF148273DC00B1F8D8 /* kattaPotterApplicationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "kattaPotterApplicationTests-Info.plist"; sourceTree = "<group>"; };
+		B927F1E1148273DC00B1F8D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B927F1E3148273DC00B1F8D8 /* kattaPotterApplicationTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kattaPotterApplicationTests.h; sourceTree = "<group>"; };
+		B927F1E4148273DC00B1F8D8 /* kattaPotterApplicationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kattaPotterApplicationTests.m; sourceTree = "<group>"; };
+		B927F1E6148273DC00B1F8D8 /* kattaPotterApplicationTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kattaPotterApplicationTests-Prefix.pch"; sourceTree = "<group>"; };
+		B929236A146C70AE00B8BC53 /* CashBookStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashBookStore.h; sourceTree = "<group>"; };
+		B929236B146C70AE00B8BC53 /* CashBookStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashBookStore.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9112EA0146B31000014BD08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9112EA8146B31000014BD08 /* UIKit.framework in Frameworks */,
+				B9112EAA146B31000014BD08 /* Foundation.framework in Frameworks */,
+				B9112EAC146B31000014BD08 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9112EC0146B31000014BD08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9112EC6146B31000014BD08 /* SenTestingKit.framework in Frameworks */,
+				B9112EC7146B31000014BD08 /* UIKit.framework in Frameworks */,
+				B9112EC8146B31000014BD08 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B927F1D5148273DB00B1F8D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B927F1DA148273DB00B1F8D8 /* SenTestingKit.framework in Frameworks */,
+				B927F1DB148273DB00B1F8D8 /* UIKit.framework in Frameworks */,
+				B927F1DC148273DB00B1F8D8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B9112E98146B30FF0014BD08 = {
+			isa = PBXGroup;
+			children = (
+				B9112EAD146B31000014BD08 /* kattaPotter */,
+				B9112ECB146B31000014BD08 /* kattaPotterTests */,
+				B927F1DD148273DB00B1F8D8 /* kattaPotterApplicationTests */,
+				B9112EA6146B31000014BD08 /* Frameworks */,
+				B9112EA4146B31000014BD08 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B9112EA4146B31000014BD08 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9112EA3146B31000014BD08 /* kattaPotter.app */,
+				B9112EC4146B31000014BD08 /* kattaPotterTests.octest */,
+				B927F1D9148273DB00B1F8D8 /* kattaPotterApplicationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9112EA6146B31000014BD08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9112EA7146B31000014BD08 /* UIKit.framework */,
+				B9112EA9146B31000014BD08 /* Foundation.framework */,
+				B9112EAB146B31000014BD08 /* CoreGraphics.framework */,
+				B9112EC5146B31000014BD08 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9112EAD146B31000014BD08 /* kattaPotter */ = {
+			isa = PBXGroup;
+			children = (
+				B929236A146C70AE00B8BC53 /* CashBookStore.h */,
+				B929236B146C70AE00B8BC53 /* CashBookStore.m */,
+				B9112EB6146B31000014BD08 /* DFAppDelegate.h */,
+				B9112EB7146B31000014BD08 /* DFAppDelegate.m */,
+				B9112EB9146B31000014BD08 /* DFViewController.h */,
+				B9112EBA146B31000014BD08 /* DFViewController.m */,
+				B9112EBC146B31000014BD08 /* DFViewController.xib */,
+				B9112EAE146B31000014BD08 /* Supporting Files */,
+			);
+			path = kattaPotter;
+			sourceTree = "<group>";
+		};
+		B9112EAE146B31000014BD08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9112EAF146B31000014BD08 /* kattaPotter-Info.plist */,
+				B9112EB0146B31000014BD08 /* InfoPlist.strings */,
+				B9112EB3146B31000014BD08 /* main.m */,
+				B9112EB5146B31000014BD08 /* kattaPotter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9112ECB146B31000014BD08 /* kattaPotterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9112ED1146B31000014BD08 /* kattaPotterTests.h */,
+				B9112ED2146B31000014BD08 /* kattaPotterTests.m */,
+				B9112ECC146B31000014BD08 /* Supporting Files */,
+			);
+			path = kattaPotterTests;
+			sourceTree = "<group>";
+		};
+		B9112ECC146B31000014BD08 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B9112ECD146B31000014BD08 /* kattaPotterTests-Info.plist */,
+				B9112ECE146B31000014BD08 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B927F1DD148273DB00B1F8D8 /* kattaPotterApplicationTests */ = {
+			isa = PBXGroup;
+			children = (
+				B927F1E3148273DC00B1F8D8 /* kattaPotterApplicationTests.h */,
+				B927F1E4148273DC00B1F8D8 /* kattaPotterApplicationTests.m */,
+				B927F1DE148273DC00B1F8D8 /* Supporting Files */,
+			);
+			path = kattaPotterApplicationTests;
+			sourceTree = "<group>";
+		};
+		B927F1DE148273DC00B1F8D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B927F1DF148273DC00B1F8D8 /* kattaPotterApplicationTests-Info.plist */,
+				B927F1E0148273DC00B1F8D8 /* InfoPlist.strings */,
+				B927F1E6148273DC00B1F8D8 /* kattaPotterApplicationTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9112EA2146B31000014BD08 /* kattaPotter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9112ED6146B31000014BD08 /* Build configuration list for PBXNativeTarget "kattaPotter" */;
+			buildPhases = (
+				B9112E9F146B31000014BD08 /* Sources */,
+				B9112EA0146B31000014BD08 /* Frameworks */,
+				B9112EA1146B31000014BD08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kattaPotter;
+			productName = kattaPotter;
+			productReference = B9112EA3146B31000014BD08 /* kattaPotter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9112EC3146B31000014BD08 /* kattaPotterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9112ED9146B31000014BD08 /* Build configuration list for PBXNativeTarget "kattaPotterTests" */;
+			buildPhases = (
+				B9112EBF146B31000014BD08 /* Sources */,
+				B9112EC0146B31000014BD08 /* Frameworks */,
+				B9112EC1146B31000014BD08 /* Resources */,
+				B9112EC2146B31000014BD08 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9112ECA146B31000014BD08 /* PBXTargetDependency */,
+			);
+			name = kattaPotterTests;
+			productName = kattaPotterTests;
+			productReference = B9112EC4146B31000014BD08 /* kattaPotterTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B927F1D8148273DB00B1F8D8 /* kattaPotterApplicationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B927F1E9148273DC00B1F8D8 /* Build configuration list for PBXNativeTarget "kattaPotterApplicationTests" */;
+			buildPhases = (
+				B927F1D4148273DB00B1F8D8 /* Sources */,
+				B927F1D5148273DB00B1F8D8 /* Frameworks */,
+				B927F1D6148273DB00B1F8D8 /* Resources */,
+				B927F1D7148273DB00B1F8D8 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kattaPotterApplicationTests;
+			productName = kattaPotterApplicationTests;
+			productReference = B927F1D9148273DB00B1F8D8 /* kattaPotterApplicationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9112E9A146B30FF0014BD08 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B9112E9D146B30FF0014BD08 /* Build configuration list for PBXProject "kattaPotter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B9112E98146B30FF0014BD08;
+			productRefGroup = B9112EA4146B31000014BD08 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9112EA2146B31000014BD08 /* kattaPotter */,
+				B9112EC3146B31000014BD08 /* kattaPotterTests */,
+				B927F1D8148273DB00B1F8D8 /* kattaPotterApplicationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9112EA1146B31000014BD08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9112EB2146B31000014BD08 /* InfoPlist.strings in Resources */,
+				B9112EBE146B31000014BD08 /* DFViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9112EC1146B31000014BD08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9112ED0146B31000014BD08 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B927F1D6148273DB00B1F8D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B927F1E2148273DC00B1F8D8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9112EC2146B31000014BD08 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		B927F1D7148273DB00B1F8D8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9112E9F146B31000014BD08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9112EB4146B31000014BD08 /* main.m in Sources */,
+				B9112EB8146B31000014BD08 /* DFAppDelegate.m in Sources */,
+				B9112EBB146B31000014BD08 /* DFViewController.m in Sources */,
+				B929236C146C70AE00B8BC53 /* CashBookStore.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9112EBF146B31000014BD08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9112ED3146B31000014BD08 /* kattaPotterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B927F1D4148273DB00B1F8D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B927F1E5148273DC00B1F8D8 /* kattaPotterApplicationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9112ECA146B31000014BD08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9112EA2146B31000014BD08 /* kattaPotter */;
+			targetProxy = B9112EC9146B31000014BD08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9112EB0146B31000014BD08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9112EB1146B31000014BD08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B9112EBC146B31000014BD08 /* DFViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9112EBD146B31000014BD08 /* en */,
+			);
+			name = DFViewController.xib;
+			sourceTree = "<group>";
+		};
+		B9112ECE146B31000014BD08 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9112ECF146B31000014BD08 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B927F1E0148273DC00B1F8D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B927F1E1148273DC00B1F8D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9112ED4146B31000014BD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B9112ED5146B31000014BD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9112ED7146B31000014BD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kattaPotter/kattaPotter-Prefix.pch";
+				INFOPLIST_FILE = "kattaPotter/kattaPotter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B9112ED8146B31000014BD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kattaPotter/kattaPotter-Prefix.pch";
+				INFOPLIST_FILE = "kattaPotter/kattaPotter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B9112EDA146B31000014BD08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kattaPotter.app/kattaPotter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kattaPotter/kattaPotter-Prefix.pch";
+				INFOPLIST_FILE = "kattaPotterTests/kattaPotterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B9112EDB146B31000014BD08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kattaPotter.app/kattaPotter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kattaPotter/kattaPotter-Prefix.pch";
+				INFOPLIST_FILE = "kattaPotterTests/kattaPotterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		B927F1E7148273DC00B1F8D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kattaPotter.app/kattaPotter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kattaPotterApplicationTests/kattaPotterApplicationTests-Prefix.pch";
+				INFOPLIST_FILE = "kattaPotterApplicationTests/kattaPotterApplicationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		B927F1E8148273DC00B1F8D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/kattaPotter.app/kattaPotter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "kattaPotterApplicationTests/kattaPotterApplicationTests-Prefix.pch";
+				INFOPLIST_FILE = "kattaPotterApplicationTests/kattaPotterApplicationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9112E9D146B30FF0014BD08 /* Build configuration list for PBXProject "kattaPotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9112ED4146B31000014BD08 /* Debug */,
+				B9112ED5146B31000014BD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9112ED6146B31000014BD08 /* Build configuration list for PBXNativeTarget "kattaPotter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9112ED7146B31000014BD08 /* Debug */,
+				B9112ED8146B31000014BD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9112ED9146B31000014BD08 /* Build configuration list for PBXNativeTarget "kattaPotterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9112EDA146B31000014BD08 /* Debug */,
+				B9112EDB146B31000014BD08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B927F1E9148273DC00B1F8D8 /* Build configuration list for PBXNativeTarget "kattaPotterApplicationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B927F1E7148273DC00B1F8D8 /* Debug */,
+				B927F1E8148273DC00B1F8D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9112E9A146B30FF0014BD08 /* Project object */;
+}
