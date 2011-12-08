@@ -28,6 +28,10 @@ class Test(unittest.TestCase):
     def testPriceTwoSameBooksThreeDifferentBooks(self):
         books2Buy = BooksList([2, 1, 1, 0, 0])
         self.assertEquals(books2Buy.prices(), 8.0 + ((24.0 * 90) / 100), books2Buy.prices())
+    
+    def testPriceTwoSameAndDifferentBooks(self):
+        books2Buy = BooksList([2, 2, 0, 0, 0])
+        self.assertEquals(books2Buy.prices(), (8.0 * 2 * 0.95) + (8.0 * 2 * 0.95), "{0} != {1}".format(books2Buy.prices(), books2Buy.prices(), (8.0 * 2 * 0.95) + (8.0 * 2 * 0.95)))
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
