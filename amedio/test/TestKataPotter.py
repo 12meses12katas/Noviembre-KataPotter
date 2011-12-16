@@ -11,27 +11,42 @@ class Test(unittest.TestCase):
 
     def testPriceOneBook(self):
         books2Buy = BooksList([1, 0, 0, 0, 0])
-        self.assertEquals(books2Buy.prices(), 8.0, books2Buy.prices())
+        expectedPrice = (8.0 * 1 * 1)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
     
     def testPriceTwoSameBooks(self):
         books2Buy = BooksList([2, 0, 0, 0, 0])
-        self.assertEquals(books2Buy.prices(), 8.0 * 2, books2Buy.prices())
+        expectedPrice = (8.0 * 1 * 1) + (8.0 * 1 * 1)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
         
     def testPriceTwoDifferentBooks(self):
         books2Buy = BooksList([1, 1, 0, 0, 0])
-        self.assertEquals(books2Buy.prices(), 15.2, books2Buy.prices())
+        expectedPrice = (8.0 * 2 * 0.95)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
         
     def testPriceThreeDifferentBooks(self):
         books2Buy = BooksList([1, 1, 1, 0, 0])
-        self.assertEquals(books2Buy.prices(), (24.0 * 90) / 100, books2Buy.prices())
+        expectedPrice = (8.0 * 3 * 0.90)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
         
     def testPriceTwoSameBooksThreeDifferentBooks(self):
         books2Buy = BooksList([2, 1, 1, 0, 0])
-        self.assertEquals(books2Buy.prices(), 8.0 + ((24.0 * 90) / 100), books2Buy.prices())
+        expectedPrice = (8.0 * 3 * 0.90) + (8.0 * 1 * 1)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
     
     def testPriceTwoSameAndDifferentBooks(self):
         books2Buy = BooksList([2, 2, 0, 0, 0])
-        self.assertEquals(books2Buy.prices(), (8.0 * 2 * 0.95) + (8.0 * 2 * 0.95), "{0} != {1}".format(books2Buy.prices(), (8.0 * 2 * 0.95) + (8.0 * 2 * 0.95)))
+        expectedPrice = (8.0 * 2 * 0.95) + (8.0 * 2 * 0.95)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
+        
+    def testPriceDifferentCasesOfBooksWithTwoRepetitionsMax(self):
+        books2Buy = BooksList([2, 2, 1, 0, 0])
+        expectedPrice = (8.0 * 3 * 0.90) + (8.0 * 2 * 0.95)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
+                
+        books2Buy = BooksList([2, 2, 1, 1, 0])
+        expectedPrice = (8.0 * 4 * 0.80) + (8.0 * 2 * 0.95)
+        self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
 
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
