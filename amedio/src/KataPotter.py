@@ -15,7 +15,14 @@ class BooksList(object):
         for books in self.listOfBooks:
             i = 0
             while (books != 0):
-                numDifferentBooks[i] += 1
+                if len(numDifferentBooks) <= i:
+                    numDifferentBooks.append(0)
+                    
+                if numDifferentBooks[i] == 4:
+                    numDifferentBooks[i+1] += 1
+                else:
+                    numDifferentBooks[i] += 1
+                    
                 i += 1
                 books -= 1
         for numBooksPerLevel in numDifferentBooks:
