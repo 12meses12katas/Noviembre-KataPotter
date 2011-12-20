@@ -1,9 +1,15 @@
 class Shopping_basquet
   def prize(books)
     if books.empty?
-      return 0
+      result = 0
     else
-      return 8
+      result = 8 * books.size
     end
-  end
+    
+    if books.size > 1
+      result *= 1 - ((books.size - 1) * 0.05)
+    end
+    
+    return result
+  end  
 end
