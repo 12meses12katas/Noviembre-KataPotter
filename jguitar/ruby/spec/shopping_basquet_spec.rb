@@ -19,4 +19,20 @@ describe "Shopping Basquet Basic Specs" do
     prize = @sb.prize([1, 2])
     prize.should eql 8 * 2 * 0.95
   end
+  
+  it "should be get a 10% discount if you buy three different books from the series" do
+    prize = @sb.prize([1, 2, 3])
+    prize.should eql 8 * 3 * 0.90
+  end
+  
+  it "should be get a 20% discount if you buy four different books from the series" do
+    prize = @sb.prize([1, 2, 3, 4])
+    prize.should eql 8 * 4 * 0.80
+  end
+  
+  it "should be get a 25% discount the whole hog" do
+    prize = @sb.prize([1, 2, 3, 4, 5])
+    prize.should eql 8 * 5 * 0.75
+  end
+  
 end
