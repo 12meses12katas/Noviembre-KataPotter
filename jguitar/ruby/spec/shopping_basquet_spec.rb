@@ -39,4 +39,9 @@ describe "Shopping Basquet Basic Specs" do
     prize = @sb.prize([1, 2, 3, 3])
     prize.should eql(8 + (8 * 3 * 0.90))
   end
+  
+  it "should be 51.20 EUR if you buy two 1st, two 2nd, two 3rd, one 4th and one 5th" do
+    prize = @sb.prize([1, 1, 2, 2, 3, 3, 4, 5])
+    prize.should eql 51.20
+  end
 end
