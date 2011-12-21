@@ -1,8 +1,0 @@
-Preguntas
-==========
-
-¿Puede haber constantes en los specs? ¿Quizás usar constantes de clase?
-
-¿Los nombre de ficheros en minúsculas, no?
-
-¿Puede haber dos "describe" en el mismo fichero spec?
