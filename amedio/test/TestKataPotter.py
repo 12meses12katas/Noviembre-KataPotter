@@ -64,6 +64,7 @@ class Test(unittest.TestCase):
         books2Buy = BooksList([5, 5, 4, 5, 4])
         expectedPrice = (3 * (8.0 * 5 * 0.75)) + (2 * (8.0 * 4 * 0.80))
         self.assertEquals(books2Buy.prices(), expectedPrice, "{0} != {1}".format(books2Buy.prices(), expectedPrice))
+        
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
