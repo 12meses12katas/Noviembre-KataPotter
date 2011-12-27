@@ -26,4 +26,11 @@ kataPotterTest.prototype.testSeveralDiscounts = function() {
 
 kataPotterTest.prototype.testEdgeCases = function() {
     expectThat(kataPotter.price([0, 0, 1, 1, 2, 2, 3, 4]), equals(2 * (8 * 4 * 0.8)));
+    var edgeCase =
+      [0, 0, 0, 0, 0,
+       1, 1, 1, 1, 1,
+       2, 2, 2, 2,
+       3, 3, 3, 3, 3,
+       4, 4, 4, 4];
+    expectThat(kataPotter.price(edgeCase), equals(3 * (8 * 5 * 0.75) + 2 * (8 * 4 * 0.8)) );
 }

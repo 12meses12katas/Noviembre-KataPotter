@@ -9,38 +9,41 @@ http://code.google.com/p/google-js-test
 * How to run the tests:
   gjstest --js_files=namespace.js,kataPotter.js,kataPotterTest.js
 
+* Notes about the kata.
 
-def testBasics
-  assert_equal(0, price([]))
-  assert_equal(8, price([0]))
-  assert_equal(8, price([1]))
-  assert_equal(8, price([2]))
-  assert_equal(8, price([3]))
-  assert_equal(8, price([4]))
-  assert_equal(8 * 2, price([0, 0]))
-  assert_equal(8 * 3, price([1, 1, 1]))
-end
+Before i started testing the edge cases, my solution was:
 
-def testSimpleDiscounts
-  assert_equal(8 * 2 * 0.95, price([0, 1]))
-  assert_equal(8 * 3 * 0.9, price([0, 2, 4]))
-  assert_equal(8 * 4 * 0.8, price([0, 1, 2, 4]))
-  assert_equal(8 * 5 * 0.75, price([0, 1, 2, 3, 4]))
-end
+    "Find the FIRST correct group in the basket for this book"
 
-def testSeveralDiscounts
-  assert_equal(8 + (8 * 2 * 0.95), price([0, 0, 1]))
-  assert_equal(2 * (8 * 2 * 0.95), price([0, 0, 1, 1]))
-  assert_equal((8 * 4 * 0.8) + (8 * 2 * 0.95), price([0, 0, 1, 2, 2, 3]))
-  assert_equal(8 + (8 * 5 * 0.75), price([0, 1, 1, 2, 3, 4]))
-end
+The "Edge case" forced me to change it to:
 
-def testEdgeCases
-  assert_equal(2 * (8 * 4 * 0.8), price([0, 0, 1, 1, 2, 2, 3, 4]))
-  assert_equal(3 * (8 * 5 * 0.75) + 2 * (8 * 4 * 0.8),
-    price([0, 0, 0, 0, 0,
-           1, 1, 1, 1, 1,
-           2, 2, 2, 2,
-           3, 3, 3, 3, 3,
-           4, 4, 4, 4]))
-end
+    "Find the BEST correct group in the basket for this book"
+
+I'l explain you my solution with the next example.
+
+Situation:
+
+ - Actual Basket:
+    group(0): [0, 1, 2, 3]
+    group(1): [0, 1, 2]
+ - Next book to add: "4".
+
+I need to add the book "4" to one of those groups. But, which one?
+The solution is to add the book to every group, calculate the prices and then
+select the basket with the lowest price.
+
+In this example:
+
+A) Basket:
+    group(0): [0, 1, 2, 3, 4]   (8 * 5 * 0.75)
+    group(1): [0, 1, 2]         (8 * 3 * 0.9)
+
+The price is 51.6
+
+B) Basket:
+    group(0): [0, 1, 2, 3]      (8 * 4 * 0.8)
+    group(1): [0, 1, 2, 4]      (8 * 4 * 0.8)
+
+The price is 51.2
+
+So the best situation is the "B".
