@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Test Runner</title>
+  <link rel="stylesheet" type="text/css" href="../../vendor/jasmine/jasmine.css"/>
+  <script type="text/javascript" src="../../vendor/jasmine/jasmine.js"></script>
+  <script type="text/javascript" src="../../vendor/jasmine/jasmine-html.js"></script>
+
+  <script type="text/javascript">
+    window.ensure__DEV__ = function (state, callback) {
+      var dev = window.__DEV__;
+      window.__DEV__ = state;
+      callback();
+      window.__DEV__ = dev;
+    };
+  </script>
+
+  <script type="text/javascript" src="../../src/functional-sugar.js"></script>
+
+  <!-- Source -->
+  <script type="text/javascript" src="../../src/BookSet.js"></script>
+  <script type="text/javascript" src="../../src/BookSetPool.js"></script>
+  <script type="text/javascript" src="../../src/Basket.js"></script>
+  <!-- Vendor JS -->
+</head>
+<body>
+
+<!-- Specs -->
+<script type="text/javascript" src="../PotterSpecs.js"></script>
+
+<script type="text/javascript">
+  window.onload = function () {
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().execute();
+  };
+</script>
+
+</body>
+</html>
