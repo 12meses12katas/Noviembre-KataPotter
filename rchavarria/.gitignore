@@ -1,0 +1,10 @@
+#
+# target directory
+#
+target/*
+
+#
+# compiled source
+#
+*.class
+
